@@ -1,0 +1,177 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.box {
+    height: 400px;
+    width: 400px;
+    position: relative;
+    margin: 10px 0 -150px 300px ;
+}
+
+.wrap {
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    transform-style: preserve-3d;
+    animation: move 10s infinite linear;
+}
+
+.wrap img {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    transition: transform 1s ease-in;
+
+}
+
+.front {
+    transform: translateZ(100px);
+}
+
+.back {
+    transform: translateZ(-100px);
+}
+
+.left {
+    transform: translateX(100px)rotateY(90deg);
+}
+
+.right {
+    transform: translateX(-100px)rotateY(90deg);
+}
+
+.top {
+    transform: translateY(100px)rotateX(90deg);
+}
+
+.bottom {
+    transform: translateY(-100px)rotateX(90deg);
+}
+
+@keyframes move {
+    0% {
+        transform: rotateX(0)rotateY(0)rotateZ(0);
+    }
+    
+    100% {
+        transform: rotateX(360deg)rotateY(360deg)rotateZ(360deg);
+    }
+}
+
+.box:hover .front {
+    transform: translateZ(150px);
+}
+
+.box:hover .back {
+    transform: translateZ(-150px);
+}
+
+.box:hover .left {
+    transform: translateX(150px)rotateY(90deg);
+}
+
+.box:hover .right {
+    transform: translateX(-150px)rotateY(90deg);
+}
+
+.box:hover .top {
+    transform: translateY(150px)rotateX(90deg);
+}
+
+.box:hover .bottom {
+    transform: translateY(-150px)rotateX(90deg);
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #ffe;
+    font-size: 14px;
+    font-family: '微软雅黑', '宋体', sans-serif;
+    color: #231F20;
+    overflow: auto
+}
+
+a {
+    color: #000;
+    font-size: 14px;
+}
+
+#main {
+    width: 100%;
+}
+
+#wrap {
+    position: relative;
+    margin: 0 auto;
+    width: 1100px;
+    height: 680px;
+    margin-top: 10px;
+}
+
+#text {
+    width: 400px;
+    height: 425px;
+    left: 60px;
+    top: 80px;
+    position: absolute;
+}
+
+#code {
+    display: none;
+    font-size: 16px;
+}
+
+#clock-box {
+    position: absolute;
+    left: 60px;
+    top: 550px;
+    font-size: 28px;
+    display: none;
+}
+
+#clock-box a {
+    font-size: 28px;
+    text-decoration: none;
+}
+
+#clock {
+    margin-left: 48px;
+}
+
+#clock .digit {
+    font-size: 64px;
+}
+
+#canvas {
+    margin: 0 auto;
+    width: 1100px;
+    height: 680px;
+}
+
+#error {
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 60px;
+    display: none;
+}
+
+.hand {
+    cursor: pointer;
+}
+
+.say {
+    margin-left: 5px;
+}
+
+.space {
+    margin-right: 150px;
+}
